@@ -1,38 +1,115 @@
-.App {
+.app-container {
+  max-width: 1200px;
+  min-width: 800px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+header {
+  height: 200px;
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+form {
+  background-color: #f6f9f6;
+  max-width: 1200px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+form > label {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100px;
   text-align: center;
+  font-weight: bolder;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form > input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(18, 78, 12);
+  outline: none;
+  width: 300px;
+  height: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form > button {
+  background-color: rgb(18, 78, 12);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 120px;
+  height: 50px;
+  margin-left: 220px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container {
+  display: flex;
+  /* flex-direction: row; */
+  flex-flow: row wrap;
+  /* justify-content: space-between; */
+}
+
+.todo-card {
+  border: 3.5px solid rgb(18, 78, 12);
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-card > div:nth-child(1) {
+  font-size: x-large;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.button > .delete-btn {
+  background-color: white;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  width: 130px;
+  cursor: pointer;
+}
+
+.button > .complete-btn {
+  background-color: white;
+  border: 2px solid green;
+  padding: 10px;
+  border-radius: 10px;
+  width: 130px;
+  cursor: pointer;
+}
+
+.button > .cancle-btn {
+  background-color: white;
+  border: 2px solid green;
+  padding: 10px;
+  border-radius: 10px;
+  width: 130px;
+  cursor: pointer;
 }
