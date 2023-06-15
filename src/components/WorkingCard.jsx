@@ -1,14 +1,14 @@
 import DeleteButton from "./DeleteButton";
 import CompleteButton from "./CompleteButton";
 
-function WorkingCard(props) {
+function WorkingCard({ todo, onSubmitHandler }) {
   return (
-    <div key={props.todo.id} className='todo-card'>
-      <div>{props.todo.title}</div>
-      <div>{props.todo.body}</div>
+    <div key={todo.id} className='todo-card'>
+      <div>{todo.title}</div>
+      <div>{todo.body}</div>
       <div className='button'>
-        <DeleteButton todo={props.todo} onSubmitHandler={props.onSubmitHandler} />
-        <CompleteButton todo={props.todo} onSubmitHandler={props.onSubmitHandler} />
+        <DeleteButton todo={todo} onSubmitHandler={onSubmitHandler} />
+        <CompleteButton todo={todo} onSubmitHandler={onSubmitHandler} />
       </div>
     </div>
   );

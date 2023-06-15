@@ -1,6 +1,6 @@
-function CancleButton(props) {
+function CancleButton({ todo, onSubmitHandler }) {
   return (
-    <button className='cancle-btn' onClick={(e) => props.onSubmitHandler(e, props.todo.id)}>
+    <button className='cancle-btn' onClick={(e) => onSubmitHandler(e, todo.id)}>
       취소
     </button>
   );

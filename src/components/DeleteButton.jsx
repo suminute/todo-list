@@ -1,6 +1,6 @@
-function DeleteButton(props) {
+function DeleteButton({ todo, onSubmitHandler }) {
   return (
-    <button className='delete-btn' onClick={(e) => props.onSubmitHandler(e, props.todo.id)}>
+    <button className='delete-btn' onClick={(e) => onSubmitHandler(e, todo.id)}>
       삭제하기
     </button>
   );
