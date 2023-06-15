@@ -98,21 +98,9 @@ function App() {
       </form>
       <main>
         <h2>Working...🔥</h2>
-        <div className='card-container'>
-          {todo
-            .filter((todo) => todo.isDone === false)
-            .map((todo) => {
-              return <WorkingCard todo={todo} onSubmitHandler={onSubmitHandler} />;
-            })}
-        </div>
+        <WorkingCard todo={todo} onSubmitHandler={onSubmitHandler} />
         <h2>Done...!🎉</h2>
-        <div className='card-container'>
-          {todo
-            .filter((todo) => todo.isDone === true)
-            .map((todo) => {
-              return <DoneCard todo={todo} onSubmitHandler={onSubmitHandler} />;
-            })}
-        </div>
+        <DoneCard todo={todo} onSubmitHandler={onSubmitHandler} />
       </main>
     </div>
   );
